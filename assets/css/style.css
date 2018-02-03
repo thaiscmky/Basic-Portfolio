@@ -67,7 +67,7 @@ header nav {
 {
     position: fixed;
     top:0;
-    z-index: 9999;
+    z-index: 99999;
     border-bottom: 2px solid #666;
     background-color: #fff;
 }
@@ -181,7 +181,7 @@ input[type="submit"]:hover {
     width: 218px;
     text-align: center;
     margin-top: -4em;
-    z-index: 9999999;
+    z-index: 9999;
     position: absolute;
 }
 
