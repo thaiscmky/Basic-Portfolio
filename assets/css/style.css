@@ -1,21 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Andika|Architects+Daughter|Bangers);
+
 html, body {
-    height: calc(100% - 7.55em);
+    height: calc(100% - 9.55em);
 }
 body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 18px;
-    background: #f5f5f5 url("../images/circles-light.png") repeat;
+    background: #f5f5f5 url("../images/spiration-dark.png") repeat;
     color: #777;
     text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6, figcaption
 {
-    font-family: 'Georgia', Times, 'Times New Roman', serif;
-    color: #4aaaa5;
+    color: #7c908f;
     border-bottom: 0.07em solid #ccc;
-    padding-bottom: 5%
+    font-family: 'Bangers',  Helvetica, sans-serif;
+    letter-spacing: 0.075em;
 }
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.3em; }
+h3 { font-size: 1.7em; letter-spacing: 0.09; }
+h4 { font-size: 1.5em; letter-spacing: 0.09; }
 
 .one-column {max-width: 960px;min-width: 265px;margin: auto;}
 
@@ -40,14 +46,16 @@ nav {
 
 header nav a {
     display: inline-block;
-    padding: 0.8em 1.2em;
+    padding: 0 1em;
     text-decoration: none;
+    font-family: 'Andika';
+    font-size: 1.2em;
 }
 header nav a:link, header nav a:visited {
-    color: #777;
+    color: #ffe8a9;
 }
 header nav a:hover {
-    color: #4aaaa5;
+    color: #67fff7;
 }
 header nav a:focus, header nav a:active {
     color: #ffa500;
@@ -58,6 +66,9 @@ header #sitename {
 }
 header nav {
     float: right;
+    background-color: #37b1dc;
+    right: -0.75em;
+    outline: #000 solid 0.5em;
 }
 
 #top_container, #bottom_container{
@@ -69,18 +80,20 @@ header nav {
     top:0;
     z-index: 99999;
     border-bottom: 2px solid #666;
-    background-color: #fff;
+    background: #000000 url(../images/banner_narrower.jpg) no-repeat bottom center;
+    background-size: 30em;
 }
 #content_container {
-    margin: 6em auto 3em auto;
+    margin: 18vh auto 3em auto;
     text-align: left;
     min-height: 100%;
     position: relative;
 }
 #bottom_container
 {
-    background-color: #666;
-    border-top: 5px solid #4aaaa5;
+    background-color: #212121;
+    border-top: 0.25em solid #000000;
+    border-bottom: 0.25em solid #000000;
     width: 100%;
     color: #ccc;
     margin-top: 1.8em;
@@ -89,14 +102,16 @@ header nav {
     position:relative;
 }
 #sitename, #sitename h1, #sitename h2{
-    color: #fff;
+    color: #37b1dc;
     border-bottom: none;
 }
 #sitename{
-    background-color: #4aaaa5;
+    background-color: #f7e3a7;
     display: inline-block;
     padding: 0.2em 2em;
+    outline: #d8cf9b 0.5em solid;
 }
+
 main {
     background-color: #fff;
 }
@@ -120,6 +135,7 @@ article p {
 
 article img {
     margin: 0.5em 1em;
+    border: 0.5em #000 solid;
 }
 
 .about-page article h2+img {
@@ -160,6 +176,7 @@ input[type="submit"]:hover {
 .portfolio-page figure img {
     margin: 0;
     position: relative;
+    border: 0.25em solid #000;
 }
 
 .portfolio-page figure:nth-of-type(1n) {
@@ -170,19 +187,23 @@ input[type="submit"]:hover {
 .portfolio-page figure:nth-of-type(2n) {
     margin-right: 0;
     padding-right: 0;
-    left: 6%;
+    left: 2%;
     position: relative;
 }
 
 .portfolio-page figcaption {
-    background-color: #4aaaa5;
+    background-color: #212121;
     color: #fff;
     padding: 0.9em;
-    width: 218px;
+    width: 10.5em;
     text-align: center;
-    margin-top: -4em;
+    margin-top: -2.7em;
     z-index: 9999;
     position: absolute;
+    margin-left: -0.5em;
+    letter-spacing: 0.05em;
+    font-size: 1.12em;
+    opacity: 0.95;
 }
 
 aside {
@@ -199,9 +220,20 @@ aside {
 }
 #socialmedia ul li{
     display:inline-block;
+    margin-top: -2em;
+}
+#socialmedia ul li a{
+    display:inline-block;
+    background: url('../images/cozmo_normal.png') center bottom no-repeat;
+    background-size: 4em;
+    padding: 3em 0.26em 0 0.26em;
+    position: relative;
 }
 #socialmedia ul li a:hover{
-    opacity: 0.5;
+    top: -3.2em;
+    margin-bottom: -3.2em;
+    padding: 0 0.26em 3.2em 0.26em;
+    background-position: center 0.05em;
 }
 footer {
     padding: 1em;
@@ -211,4 +243,16 @@ footer {
     content: "";
     display: table;
     clear: both;
+}
+
+/*** Stylizing ***/
+.skew {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: skew(-16deg, 0);
+    position : relative;
+}
+.skew a {
+    -webkit-transform : skew(16deg, 0);
+    position          : relative;
 }
